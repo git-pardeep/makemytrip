@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RetryTest]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.makemytrip.utilities.RetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.makemytrip.testcases.SearchDateTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="searchDate" invocation-numbers="0 0 0 0 1 1 1 1"/>
+        </methods>
+      </class> <!-- com.makemytrip.testcases.SearchDateTest -->
+      <class name="com.makemytrip.testcases.SelectFlightTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="selectFlightTest" invocation-numbers="0 0 0 0 1 1 1 1 2 2 2 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.makemytrip.testcases.SelectFlightTest -->
+      <class name="com.makemytrip.testcases.HomePageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="loadConfig"/>
+          <include name="homePageTest" invocation-numbers="1 1 1 1 2 2 2 2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.makemytrip.testcases.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [RetryTest] -->
