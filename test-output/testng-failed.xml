@@ -5,35 +5,26 @@
     <listener class-name="com.makemytrip.utilities.ListenerTest"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.makemytrip.testcases.HomePageTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="setup"/>
-          <include name="loadConfig"/>
-          <include name="homePageTest" invocation-numbers="0 1 2"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.makemytrip.testcases.HomePageTest -->
       <class name="com.makemytrip.testcases.SelectFlightTest">
         <methods>
           <include name="closeBrowser"/>
           <include name="setup"/>
           <include name="loadConfig"/>
-          <include name="selectFlightTest" invocation-numbers="0 1 2"/>
+          <include name="selectFlightTest" invocation-numbers="2"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.makemytrip.testcases.SelectFlightTest -->
-      <class name="com.makemytrip.testcases.SearchDateTest">
+      <class name="com.makemytrip.testcases.HomePageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="closeBrowser"/>
           <include name="setup"/>
           <include name="loadConfig"/>
-          <include name="searchDate" invocation-numbers="0 1"/>
+          <include name="homePageTest" invocation-numbers="2"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.makemytrip.testcases.SearchDateTest -->
+      </class> <!-- com.makemytrip.testcases.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Master sheet] -->

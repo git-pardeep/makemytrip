@@ -4,7 +4,18 @@
 	<listeners>
 		<listener class-name="com.makemytrip.utilities.ListenerTest"></listener>
 	</listeners>
-  <test  name="Test"> 
+  <test name="ChromeTest"> 
+	  <parameter name="browser" value="chrome"></parameter>
+	  <groups><run>
+		  <include name="regression"></include>
+	  </run></groups>
+    <classes>
+      <class name="com.makemytrip.testcases.HomePageTest"/>
+      <class name="com.makemytrip.testcases.SelectFlightTest"/>
+      <class name="com.makemytrip.testcases.SearchDateTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test  name="FirefoxTest"> 
 	  <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="com.makemytrip.testcases.HomePageTest"/>
@@ -12,4 +23,5 @@
       <class name="com.makemytrip.testcases.SearchDateTest"/>
     </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

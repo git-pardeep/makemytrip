@@ -20,7 +20,7 @@ public class ReadExcelFile {
 	@DataProvider(name="bvttest")
 	public String[][] readExcelFile(Method m) throws EncryptedDocumentException, IOException {
 		String sheetname =m.getName();
-		file= new File(System.getProperty("user.dir")+"\\src\\test\\resources\\testdata\\testdata.xlsx");
+		file= new File(System.getProperty("user.dir")+"\\testdata\\testdata.xlsx");
 		fis=new FileInputStream(file);
 		Workbook wb =WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheet(sheetname);
